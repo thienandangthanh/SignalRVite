@@ -11,6 +11,6 @@ public class ChatHub : Hub<IChatClient>
         {
             throw new HubException("Here's your error");
         }
-        await Clients.Caller.MessageReceivedAsync(username, message);
+        await Clients.Caller.MessageReceivedAsync(username, new ReceivedMessage(message));
     }
 }

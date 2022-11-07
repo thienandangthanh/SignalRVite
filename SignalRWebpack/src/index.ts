@@ -10,10 +10,15 @@ const connection = new signalR.HubConnectionBuilder()
     .withUrl("/hub")
     .build();
 
-connection.on("messageReceived", (username: string, message: string) => {
+interface IReceivedMessage {
+    message: string,
+    time: number
+}
+
+connection.on("messageReceived", (username: string, payload: IReceivedMessage) => {
     const m = document.createElement("div");
 
-    m.innerHTML = `<div class="message-author">${username}</div><div>${message}</div>`;
+    m.innerHTML = `<span class="message-author">${username}</span><span> at ${payload.time}</span><div>${payload.message}</div>`;
 
     divMessages.appendChild(m);
     divMessages.scrollTop = divMessages.scrollHeight;
