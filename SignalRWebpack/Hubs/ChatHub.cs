@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace SignalRWebpack.Hubs;
 
-public class ChatHub : Hub
+public class ChatHub : Hub<IChatClient>
 {
-    public async Task NewMessage(long username, string message) =>
-    await Clients.All.SendAsync("messageReceived", username, message);
+    [HubMethodName("newMessage")]
+    public async Task NewMessageAsync(long username, string message)
+    {
+        await Clients.Caller.MessageReceivedAsync(username, message);
+    }
 }
