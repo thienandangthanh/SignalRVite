@@ -1,4 +1,4 @@
-namespace SignalRWebpack;
+namespace SignalRVite;
 
 public class WeatherForecast
 {

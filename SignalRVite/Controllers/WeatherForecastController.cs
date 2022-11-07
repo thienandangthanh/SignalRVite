@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SignalRWebpack.Controllers;
+namespace SignalRVite.Controllers;
 
 [ApiController]
 [Route("[controller]")]

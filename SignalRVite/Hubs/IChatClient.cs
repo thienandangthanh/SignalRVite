@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.SignalR;
 
-namespace SignalRWebpack.Hubs;
+namespace SignalRVite.Hubs;
 
 public interface IChatClient
 {

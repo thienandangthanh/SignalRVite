@@ -1,4 +1,4 @@
-using SignalRWebpack.Hubs;
+using SignalRVite.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

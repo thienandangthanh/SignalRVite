@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "SignalRWebpack": {
+    "SignalRVite": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

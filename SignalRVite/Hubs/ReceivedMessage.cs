@@ -1,4 +1,4 @@
-namespace SignalRWebpack.Hubs;
+namespace SignalRVite.Hubs;
 
 public class ReceivedMessage
 {
