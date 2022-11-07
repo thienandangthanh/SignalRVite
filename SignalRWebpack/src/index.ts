@@ -30,6 +30,10 @@ tbMessage.addEventListener("keyup", (e: KeyboardEvent) => {
 btnSend.addEventListener("click", send);
 
 function send() {
-    connection.send("newMessage", username, tbMessage.value)
-        .then(() => (tbMessage.value = ""));
+    try {
+        connection.invoke("newMessage", username, tbMessage.value)
+            .then(() => (tbMessage.value = ""));
+    } catch (err) {
+        console.error(err);
+    }
 }
