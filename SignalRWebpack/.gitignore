@@ -6,3 +6,4 @@ riderModule.iml
 **/node_modules
 **/build
 wwwroot
+/src/index.js
